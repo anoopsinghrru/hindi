@@ -9,6 +9,7 @@ const router = Router();
 // GET /puzzle - Hydrates saved word states and renders the crossword answer pad / results view
 router.get('/', requireAuth, async (req, res) => {
   try {
+    res.set('Cache-Control', 'no-store, no-cache, must-revalidate, private');
     const session = req.sessionData;
     const wordStates = await WordState.find({ sessionId: session._id });
 

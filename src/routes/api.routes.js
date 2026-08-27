@@ -115,7 +115,7 @@ router.post('/submit-word', requireAuth, async (req, res) => {
   }
 });
 
-// POST /api/final-submit - Final submission of the crossword puzzle
+// POST /api/final-submit - Final submission of the crossword puzzle (Ultra-fast Bulk Write)
 router.post('/final-submit', requireAuth, async (req, res) => {
   try {
     const sessionId = req.sessionData._id;
@@ -135,44 +135,49 @@ router.post('/final-submit', requireAuth, async (req, res) => {
       });
     }
 
-    // Step 0: Sync any immediate client DOM wordStates payload
+    // Step 1: Reconstruct unified cell grid map from client payload or DB states
+    const cellGridMap = {};
     const clientWordStates = req.body ? req.body.wordStates : null;
+
     if (clientWordStates && typeof clientWordStates === 'object') {
-      for (const [wId, wData] of Object.entries(clientWordStates)) {
-        if (wData && Array.isArray(wData.currentGuess)) {
-          await WordState.findOneAndUpdate(
-            { sessionId, wordId: wId },
-            { currentGuess: wData.currentGuess },
-            { upsert: true }
-          );
+      Object.entries(clientWordStates).forEach(([wId, wData]) => {
+        const wordDef = puzzleData.words[wId];
+        if (wordDef && wData && Array.isArray(wData.currentGuess)) {
+          wordDef.cells.forEach((cPos, idx) => {
+            const charVal = wData.currentGuess[idx];
+            if (charVal && charVal.trim()) {
+              cellGridMap[`${cPos.row}-${cPos.col}`] = charVal.trim();
+            }
+          });
         }
-      }
+      });
+    } else {
+      const existingStates = await WordState.find({ sessionId });
+      existingStates.forEach((ws) => {
+        const wordDef = puzzleData.words[ws.wordId];
+        if (wordDef && Array.isArray(ws.currentGuess)) {
+          wordDef.cells.forEach((cPos, idx) => {
+            const charVal = ws.currentGuess[idx];
+            if (charVal && charVal.trim()) {
+              cellGridMap[`${cPos.row}-${cPos.col}`] = charVal.trim();
+            }
+          });
+        }
+      });
     }
 
-    const wordStates = await WordState.find({ sessionId });
-
-    // Step 1: Build unified grid cell map from all saved WordStates
-    const cellGridMap = {};
-    wordStates.forEach((ws) => {
-      const wordDef = puzzleData.words[ws.wordId];
-      if (wordDef && Array.isArray(ws.currentGuess)) {
-        wordDef.cells.forEach((cPos, idx) => {
-          const charVal = ws.currentGuess[idx];
-          if (charVal && charVal.trim()) {
-            cellGridMap[`${cPos.row}-${cPos.col}`] = charVal.trim();
-          }
-        });
-      }
+    // Step 2: Prepare single bulkWrite operation for all 37 words
+    const existingStates = await WordState.find({ sessionId });
+    const timeSpentMap = {};
+    existingStates.forEach((ws) => {
+      timeSpentMap[ws.wordId] = ws.totalTimeSpent || 0;
     });
 
-    // Step 2: Re-verify all 37 words against unified cell grid map and tally accurate score
+    const bulkOps = [];
     let totalScore = 0;
     let accumulatedWordTime = 0;
 
-    for (const ws of wordStates) {
-      const wordDef = puzzleData.words[ws.wordId];
-      if (!wordDef) continue;
-
+    Object.values(puzzleData.words).forEach((wordDef) => {
       const evaluatedGuess = [];
       let isCorrect = true;
 
@@ -186,14 +191,28 @@ router.post('/final-submit', requireAuth, async (req, res) => {
         }
       }
 
-      ws.currentGuess = evaluatedGuess;
-      ws.isCorrect = isCorrect;
-      await ws.save();
-
       if (isCorrect) {
         totalScore++;
       }
-      accumulatedWordTime += ws.totalTimeSpent || 0;
+      accumulatedWordTime += timeSpentMap[wordDef.id] || 0;
+
+      bulkOps.push({
+        updateOne: {
+          filter: { sessionId, wordId: wordDef.id },
+          update: {
+            $set: {
+              currentGuess: evaluatedGuess,
+              isCorrect: isCorrect,
+            },
+          },
+          upsert: true,
+        },
+      });
+    });
+
+    // Execute bulkWrite in ONE single MongoDB database call
+    if (bulkOps.length > 0) {
+      await WordState.bulkWrite(bulkOps);
     }
 
     const now = new Date();

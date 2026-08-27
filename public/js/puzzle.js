@@ -16,6 +16,13 @@ let activeCellCol = null;
 
 let currentFocusStartTime = null;
 
+// BFCache Navigation Guard (reloads if participant presses phone Back button)
+window.addEventListener('pageshow', (event) => {
+  if (event.persisted) {
+    window.location.reload();
+  }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   const serverDataEl = document.getElementById('server-data');
   if (serverDataEl) {
@@ -476,7 +483,7 @@ function executeFinalSubmit() {
     .then((res) => res.json())
     .then((data) => {
       if (data.success) {
-        window.location.href = '/leaderboard';
+        window.location.replace('/leaderboard');
       }
     })
     .catch((err) => console.error('Final submit error:', err));
