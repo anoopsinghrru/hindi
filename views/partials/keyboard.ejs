@@ -1,0 +1,18 @@
+<!-- Custom Hindi Fixed Keyboard -->
+<div class="keyboard-wrapper" id="keyboard-wrapper">
+  <div class="keyboard-controls">
+    <button type="button" class="btn btn-secondary key-ctrl" onclick="handleBackspace()">मिटाएँ</button>
+    <button type="button" class="btn btn-secondary key-ctrl" onclick="handleClearWord()">शब्द साफ़ करें</button>
+    <button type="button" class="btn btn-secondary key-ctrl" onclick="handleNextWord()">अगला शब्द</button>
+  </div>
+  
+  <div class="keyboard-keys-container" id="keyboard-keys">
+    <% 
+      const allSyllables = [...puzzleData.puzzleSyllables, ...puzzleData.decoySyllables];
+      allSyllables.sort((a, b) => a.localeCompare(b, 'hi'));
+    %>
+    <% allSyllables.forEach(syllable => { %>
+      <button type="button" class="key-btn" onclick="handleKeyInput('<%= syllable %>')"><%= syllable %></button>
+    <% }); %>
+  </div>
+</div>

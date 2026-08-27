@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>हिंदी वर्ग पहेली - लीडरबोर्ड</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    body {
+      padding-bottom: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="app-header">
+    <div class="header-top">
+      <div class="brand-title">वर्ग पहेली - लाइव लीडरबोर्ड</div>
+      <% if (user) { %>
+        <div class="user-badge">प्रतिभागी: <%= user.name %></div>
+      <% } %>
+    </div>
+    <div class="header-actions">
+      <% if (user) { %>
+        <% if (!mySession) { %>
+          <a href="/puzzle" class="btn btn-secondary">उत्तर पैड पर जाएँ</a>
+        <% } %>
+        <a href="/logout" class="btn btn-secondary">लॉगआउट</a>
+      <% } else { %>
+        <a href="/" class="btn btn-primary">प्रवेश (Login)</a>
+      <% } %>
+    </div>
+  </header>
+
+  <div class="results-screen">
+    <% if (mySession) { %>
+      <div class="results-card">
+        <h2>आपका परिणाम</h2>
+        <div style="font-size: 16px; margin-bottom: 4px;">प्रतिभागी: <strong><%= user.name %></strong></div>
+        <div class="score-display">
+          <%= mySession.totalScore %> / 37
+        </div>
+        <div class="time-display">
+          कुल समय: <%= Math.floor((mySession.totalTimeSpent || 0) / 60) %> मि <%= (mySession.totalTimeSpent || 0) % 60 %> से
+        </div>
+      </div>
+    <% } %>
+
+    <div class="leaderboard-title">लाइव लीडरबोर्ड (Live Leaderboard)</div>
+    <table class="leaderboard-table">
+      <thead>
+        <tr>
+          <th>रैंक</th>
+          <th>नाम</th>
+          <th>स्कोर</th>
+          <th>समय</th>
+        </tr>
+      </thead>
+      <tbody id="leaderboard-tbody">
+        <% if (leaderboard && leaderboard.length > 0) { %>
+          <% leaderboard.forEach((entry, idx) => { %>
+            <tr class="<%= user && entry.userId && entry.userId._id.toString() === user._id.toString() ? 'my-rank-row' : '' %>">
+              <td><%= idx + 1 %></td>
+              <td><%= entry.userId ? entry.userId.name : 'अज्ञात' %></td>
+              <td><%= entry.totalScore %> / 37</td>
+              <td><%= Math.floor((entry.totalTimeSpent || 0) / 60) %> मि <%= (entry.totalTimeSpent || 0) % 60 %> से</td>
+            </tr>
+          <% }); %>
+        <% } else { %>
+          <tr>
+            <td colspan="4">कोई परिणाम अभी उपलब्ध नहीं है।</td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    window.USER_ID = "<%= user ? user._id : '' %>";
+  </script>
+  <script src="/js/leaderboard.js"></script>
+</body>
+</html>

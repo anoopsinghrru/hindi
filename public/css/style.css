@@ -1,0 +1,414 @@
+/* ==========================================================================
+   Utilitarian & Minimal Mobile-First Hindi Crossword Answer Pad CSS
+   ========================================================================== */
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --border-color: #000000;
+  --active-word-bg: #e3f2fd;   /* Soft blue for locked active word */
+  --active-cell-bg: #bbdefb;   /* Slightly deeper blue for active cell */
+  --cross-highlight-bg: #fff3e0; /* Soft amber/yellow for intersection cross-highlight */
+  --correct-bg: #e8f5e9;       /* Soft green for verified completed words */
+  --font-family: 'Mukta', 'Nirmala UI', 'Mangal', 'Anek Devanagari', 'Tiro Devanagari Hindi', 'Kohinoor Devanagari', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  line-height: 1.4;
+  padding-bottom: 300px; /* Ample space to allow scrolling grid all the way above elevated keyboard */
+}
+
+/* Header & Top Bar */
+.app-header {
+  background: #ffffff;
+  border-bottom: 2px solid var(--border-color);
+  padding: 8px 12px;
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-title {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.user-badge {
+  font-size: 12px;
+  font-weight: 600;
+  background: #f0f0f0;
+  padding: 3px 6px;
+  border: 1px solid #000;
+  border-radius: 4px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.btn {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 10px;
+  border: 1.5px solid var(--border-color);
+  background: #ffffff;
+  color: #000000;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: #000000;
+  color: #ffffff;
+}
+
+.btn-danger {
+  background: #d32f2f;
+  color: #ffffff;
+  border-color: #d32f2f;
+}
+
+.btn-secondary {
+  background: #f5f5f5;
+  color: #000000;
+}
+
+/* Clue & Active Status Bar */
+.active-clue-bar {
+  background: #f9f9f9;
+  border-bottom: 1px solid var(--border-color);
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 36px;
+}
+
+.clue-text {
+  font-weight: 700;
+}
+
+.dir-badge {
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 5px;
+  border: 1px solid #000;
+  background: #fff;
+}
+
+/* Grid Container - Scrollable without left clipping */
+.grid-wrapper {
+  overflow-x: auto;
+  overflow-y: auto;
+  padding: 8px 8px 200px 8px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  display: block;
+}
+
+.grid-board {
+  display: grid;
+  grid-template-columns: repeat(18, 34px);
+  grid-template-rows: repeat(24, 34px);
+  gap: 0;
+  border: 2px solid var(--border-color);
+  background-color: #000000; /* Black grid lines */
+  margin: 0 auto;
+  min-width: max-content;
+}
+
+/* Cell Styling */
+.cell-blk {
+  background-color: #000000;
+  width: 34px;
+  height: 34px;
+}
+
+.cell {
+  background-color: #ffffff;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #000000;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.cell-num {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  font-size: 8px;
+  font-weight: 800;
+  line-height: 1;
+  color: #333333;
+  pointer-events: none;
+}
+
+.cell-char {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1;
+}
+
+/* Highlight States */
+.cell.cross-highlight {
+  background-color: var(--cross-highlight-bg) !important;
+}
+
+.cell.active-word {
+  background-color: var(--active-word-bg) !important;
+}
+
+.cell.active-cell {
+  background-color: var(--active-cell-bg) !important;
+  outline: 2px solid #1976d2;
+  outline-offset: -2px;
+  z-index: 10;
+}
+
+/* Custom Hindi Keyboard */
+.keyboard-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-top: 2px solid var(--border-color);
+  padding: 6px 6px calc(12px + env(safe-area-inset-bottom)) 6px;
+  z-index: 1000;
+  box-shadow: 0 -4px 16px rgba(0,0,0,0.2);
+}
+
+.keyboard-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.key-ctrl {
+  flex: 1;
+  padding: 6px 2px;
+  font-size: 12px;
+  font-weight: 700;
+  height: 32px;
+}
+
+.keyboard-keys-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: center;
+  max-height: 180px;
+  overflow-y: auto;
+  padding: 4px 2px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.key-btn {
+  background: #ffffff;
+  border: 1.5px solid #000000;
+  border-radius: 4px;
+  min-width: 32px;
+  height: 32px;
+  padding: 0 4px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  transition: transform 0.05s ease, background-color 0.1s;
+}
+
+.key-btn:active {
+  transform: scale(0.92);
+  background-color: #e0e0e0;
+}
+
+/* Modals */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.modal-overlay.hidden {
+  display: none !important;
+}
+
+.modal-card {
+  background: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  padding: 18px;
+  max-width: 480px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-body {
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.modal-body ol {
+  padding-left: 20px;
+  margin-top: 6px;
+}
+
+.modal-body li {
+  margin-bottom: 4px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+/* Results Screen & Standalone Leaderboard Page */
+.results-screen {
+  max-width: 600px;
+  margin: 16px auto;
+  padding: 12px;
+}
+
+.results-card {
+  background: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.results-card h2 {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.score-display {
+  font-size: 32px;
+  font-weight: 800;
+  color: #2e7d32;
+  margin: 6px 0;
+}
+
+.time-display {
+  font-size: 15px;
+  color: #555555;
+}
+
+.leaderboard-title {
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #000;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #000000;
+  font-size: 13px;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+  border: 1px solid #000000;
+  padding: 8px 6px;
+  text-align: center;
+}
+
+.leaderboard-table th {
+  background: #f0f0f0;
+  font-weight: 800;
+}
+
+.leaderboard-table tr:nth-child(even) {
+  background: #fdfdfd;
+}
+
+.my-rank-row {
+  background: #fff9c4 !important;
+  font-weight: 800;
+}
+
+/* Responsive Grid Sizing for Mobile */
+@media (max-width: 480px) {
+  .grid-board {
+    grid-template-columns: repeat(18, 30px);
+    grid-template-rows: repeat(24, 30px);
+  }
+  .cell, .cell-blk {
+    width: 30px;
+    height: 30px;
+  }
+  .cell-char {
+    font-size: 14px;
+  }
+  .key-btn {
+    min-width: 26px;
+    height: 26px;
+    font-size: 12px;
+  }
+}

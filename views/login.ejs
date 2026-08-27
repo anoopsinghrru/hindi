@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>हिंदी वर्ग पहेली - प्रवेश (Login)</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    body {
+      padding-bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: #f9f9f9;
+    }
+    .login-card {
+      background: #ffffff;
+      border: 2px solid #000000;
+      border-radius: 8px;
+      padding: 24px;
+      width: 100%;
+      max-width: 380px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .login-title {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 4px;
+      text-align: center;
+    }
+    .login-subtitle {
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 14px;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    .form-control {
+      width: 100%;
+      padding: 10px 12px;
+      font-family: inherit;
+      font-size: 15px;
+      border: 1.5px solid #000000;
+      border-radius: 4px;
+    }
+    .error-msg {
+      background: #ffebee;
+      color: #c62828;
+      padding: 8px 12px;
+      border: 1px solid #c62828;
+      border-radius: 4px;
+      font-size: 13px;
+      margin-bottom: 14px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-card">
+    <div class="login-title">हिंदी वर्ग पहेली</div>
+    <div class="login-subtitle">लाइव कक्षा प्रतियोगिता उत्तर पैड</div>
+
+    <% if (error) { %>
+      <div class="error-msg"><%= error %></div>
+    <% } %>
+
+    <form action="/login" method="POST">
+      <div class="form-group">
+        <label for="name">आपका नाम (Full Name):</label>
+        <input type="text" id="name" name="name" class="form-control" placeholder="उदा. राहुल शर्मा" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">ईमेल आईडी (Email ID):</label>
+        <input type="email" id="email" name="email" class="form-control" placeholder="example@mail.com" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="width: 100%; padding: 12px; font-size: 16px; margin-top: 8px;">
+        प्रतियोगिता शुरू करें
+      </button>
+    </form>
+  </div>
+</body>
+</html>

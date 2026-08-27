@@ -1,0 +1,2144 @@
+/**
+ * Pre-calculated 24x18 Hindi Crossword Puzzle Data
+ * Total Words: 37 (18 Across, 19 Down)
+ * Total Active Grid Cells: 87
+ */
+export const puzzleData = {
+  "gridDimensions": {
+    "rows": 24,
+    "cols": 18
+  },
+  "cellMap": {
+    "0-14": {
+      "row": 0,
+      "col": 14,
+      "num": 1,
+      "char": "मी",
+      "acrossWord": null,
+      "acrossIndex": null,
+      "downWord": "down-1",
+      "downIndex": 0
+    },
+    "1-12": {
+      "row": 1,
+      "col": 12,
+      "num": 2,
+      "char": "अ",
+      "acrossWord": "across-2",
+      "acrossIndex": 0,
+      "downWord": "down-2",
+      "downIndex": 0
+    },
+    "1-13": {
+      "row": 1,
+      "col": 13,
+      "num": null,
+      "char": "नु",
+      "acrossWord": "across-2",
+      "acrossIndex": 1,
+      "downWord": null,
+      "downIndex": null
+    },
+    "1-14": {
+      "row": 1,
+      "col": 14,
+      "num": null,
+      "char": "रा",
+      "acrossWord": "across-2",
+      "acrossIndex": 2,
+      "downWord": "down-1",
+      "downIndex": 1
+    },
+    "1-15": {
+      "row": 1,
+      "col": 15,
+      "num": 3,
+      "char": "ग",
+      "acrossWord": "across-2",
+      "acrossIndex": 3,
+      "downWord": "down-3",
+      "downIndex": 0
+    },
+    "1-17": {
+      "row": 1,
+      "col": 17,
+      "num": 4,
+      "char": "पु",
+      "acrossWord": null,
+      "acrossIndex": null,
+      "downWord": "down-4",
+      "downIndex": 0
+    },
+    "2-10": {
+      "row": 2,
+      "col": 10,
+      "num": 5,
+      "char": "नि",
+      "acrossWord": null,
+      "acrossIndex": null,
+      "downWord": "down-5",
+      "downIndex": 0
+    },
+    "2-12": {
+      "row": 2,
+      "col": 12,
+      "num": null,
+      "char": "ज्ञे",
+      "acrossWord": null,
+      "acrossIndex": null,
+      "downWord": "down-2",
+      "downIndex": 1
+    },
+    "2-15": {
+      "row": 2,
+      "col": 15,
+      "num": null,
+      "char": "ब",
+      "acrossWord": null,
+      "acrossIndex": null,
+      "downWord": "down-3",
+      "downIndex": 1
+    },
+    "2-17": {
+      "row": 2,
+      "col": 17,
+      "num": null,
+      "char": "स्त",
+      "acrossWord": null,
+      "acrossIndex": null,
+      "downWord": "down-4",
+      "downIndex": 1
+    },
+    "3-10": {
+      "row": 3,
+      "col": 10,
+      "num": 6,
+      "char": "रा",
+      "acrossWord": "across-6",
+      "acrossIndex": 0,
+      "downWord": "down-5",
+      "downIndex": 1
+    },
+    "3-11": {
+      "row": 3,
+      "col": 11,
+      "num": null,
+      "char": "मा",
+      "acrossWord": "across-6",
+      "acrossIndex": 1,
+      "downWord": null,
+      "downIndex": null
+    },
+    "3-12": {
+      "row": 3,
+      "col": 12,
+      "num": null,
+      "char": "य",
+      "acrossWord": "across-6",
+      "acrossIndex": 2,
+      "downWord": "down-2",
+      "downIndex": 2
+    },
+    "3-13": {
+      "row": 3,
+      "col": 13,
+      "num": null,
+      "char": "ण",
+      "acrossWord": "across-6",
+      "acrossIndex": 3,
+      "downWord": null,
+      "downIndex": null
+    },
+    "3-15": {
+      "row": 3,
+      "col": 15,
+      "num": 7,
+      "char": "न",
+      "acrossWord": "across-7",
+      "acrossIndex": 0,
+      "downWord": "down-3",
+      "downIndex": 2
+    },
+    "3-16": {
+      "row": 3,
+      "col": 16,
+      "num": null,
+      "char": "म",
+      "acrossWord": "across-7",
+      "acrossIndex": 1,
+      "downWord": null,
+      "downIndex": null
+    },
+    "3-17": {
+      "row": 3,
+      "col": 17,
+      "num": null,
+      "char": "क",
+      "acrossWord": "across-7",
+      "acrossIndex": 2,
+      "downWord": "down-4",
+      "downIndex": 2
+    },
+    "4-6": {
+      "row": 4,
+      "col": 6,
+      "num": 8,
+      "char": "का",
+      "acrossWord": null,
+      "acrossIndex": null,
+      "downWord": "down-8",
+      "downIndex": 0
+    },
+    "4-8": {
+      "row": 4,
+      "col": 8,
+      "num": 9,
+      "char": "नि",
+      "acrossWord": "across-9",
+      "acrossIndex": 0,
+      "downWord": "down-9",
+      "downIndex": 0
+    },
+    "4-9": {
+      "row": 4,
+      "col": 9,
+      "num": null,
+      "char": "र्म",
+      "acrossWord": "across-9",
+      "acrossIndex": 1,
+      "downWord": null,
+      "downIndex": null
+    },
+    "4-10": {
+      "row": 4,
+      "col": 10,
+      "num": null,
+      "char": "ला",
+      "acrossWord": "across-9",
+      "acrossIndex": 2,
+      "downWord": "down-5",
+      "downIndex": 2
+    },
+    "5-4": {
+      "row": 5,
+      "col": 4,
+      "num": 10,
+      "char": "दि",
+      "acrossWord": null,
+      "acrossIndex": null,
+      "downWord": "down-10",
+      "downIndex": 0
+    },
+    "5-6": {
+      "row": 5,
+      "col": 6,
+      "num": null,
+      "char": "मा",
+      "acrossWord": null,
+      "acrossIndex": null,
+      "downWord": "down-8",
+      "downIndex": 1
+    },
+    "5-8": {
+      "row": 5,
+      "col": 8,
+      "num": null,
+      "char": "बं",
+      "acrossWord": null,
+      "acrossIndex": null,
+      "downWord": "down-9",
+      "downIndex": 1
+    },
+    "6-2": {
+      "row": 6,
+      "col": 2,
+      "num": 11,
+      "char": "गो",
+      "acrossWord": "across-11",
+      "acrossIndex": 0,
+      "downWord": null,
+      "downIndex": null
+    },
+    "6-3": {
+      "row": 6,
+      "col": 3,
+      "num": null,
+      "char": "दा",
+      "acrossWord": "across-11",
+      "acrossIndex": 1,
+      "downWord": null,
+      "downIndex": null
+    },
+    "6-4": {
+      "row": 6,
+      "col": 4,
+      "num": null,
+      "char": "न",
+      "acrossWord": "across-11",
+      "acrossIndex": 2,
+      "downWord": "down-10",
+      "downIndex": 1
+    },
+    "6-6": {
+      "row": 6,
+      "col": 6,
+      "num": 12,
+      "char": "य",
+      "acrossWord": "across-12",
+      "acrossIndex": 0,
+      "downWord": "down-8",
+      "downIndex": 2
+    },
+    "6-7": {
+      "row": 6,
+      "col": 7,
+      "num": null,
+      "char": "शो",
+      "acrossWord": "across-12",
+      "acrossIndex": 1,
+      "downWord": null,
+      "downIndex": null
+    },
+    "6-8": {
+      "row": 6,
+      "col": 8,
+      "num": null,
+      "char": "ध",
+      "acrossWord": "across-12",
+      "acrossIndex": 2,
+      "downWord": "down-9",
+      "downIndex": 2
+    },
+    "6-9": {
+      "row": 6,
+      "col": 9,
+      "num": null,
+      "char": "रा",
+      "acrossWord": "across-12",
+      "acrossIndex": 3,
+      "downWord": null,
+      "downIndex": null
+    },
+    "7-4": {
+      "row": 7,
+      "col": 4,
+      "num": 13,
+      "char": "क",
+      "acrossWord": "across-13",
+      "acrossIndex": 0,
+      "downWord": "down-10",
+      "downIndex": 2
+    },
+    "7-5": {
+      "row": 7,
+      "col": 5,
+      "num": null,
+      "char": "हा",
+      "acrossWord": "across-13",
+      "acrossIndex": 1,
+      "downWord": null,
+      "downIndex": null
+    },
+    "7-6": {
+      "row": 7,
+      "col": 6,
+      "num": null,
+      "char": "नी",
+      "acrossWord": "across-13",
+      "acrossIndex": 2,
+      "downWord": "down-8",
+      "downIndex": 3
+    },
+    "8-1": {
+      "row": 8,
+      "col": 1,
+      "num": 14,
+      "char": "मु",
+      "acrossWord": "across-14",
+      "acrossIndex": 0,
+      "downWord": "down-14",
+      "downIndex": 0
+    },
+    "8-2": {
+      "row": 8,
+      "col": 2,
+      "num": null,
+      "char": "सा",
+      "acrossWord": "across-14",
+      "acrossIndex": 1,
+      "downWord": null,
+      "downIndex": null
+    },
+    "8-3": {
+      "row": 8,
+      "col": 3,
+      "num": null,
+      "char": "फि",
+      "acrossWord": "across-14",
+      "acrossIndex": 2,
+      "downWord": null,
+      "downIndex": null
+    },
+    "8-4": {
+      "row": 8,
+      "col": 4,
+      "num": null,
+      "char": "र",
+      "acrossWord": "across-14",
+      "acrossIndex": 3,
+      "downWord": "down-10",
+      "downIndex": 3
+    },
+    "9-0": {
+      "row": 9,
+      "col": 0,
+      "num": 15,
+      "char": "दो",
+      "acrossWord": "across-15",
+      "acrossIndex": 0,
+      "downWord": null,
+      "downIndex": null
+    },
+    "9-1": {
+      "row": 9,
+      "col": 1,
+      "num": null,
+      "char": "हा",
+      "acrossWord": "across-15",
+      "acrossIndex": 1,
+      "downWord": "down-14",
+      "downIndex": 1
+    },
+    "10-1": {
+      "row": 10,
+      "col": 1,
+      "num": null,
+      "char": "व",
+      "acrossWord": null,
+      "acrossIndex": null,
+      "downWord": "down-14",
+      "downIndex": 2
+    },
+    "10-4": {
+      "row": 10,
+      "col": 4,
+      "num": 16,
+      "char": "भा",
+      "acrossWord": "across-16",
+      "acrossIndex": 0,
+      "downWord": "down-16",
+      "downIndex": 0
+    },
+    "10-5": {
+      "row": 10,
+      "col": 5,
+      "num": null,
+      "char": "र",
+      "acrossWord": "across-16",
+      "acrossIndex": 1,
+      "downWord": null,
+      "downIndex": null
+    },
+    "10-6": {
+      "row": 10,
+      "col": 6,
+      "num": null,
+      "char": "त",
+      "acrossWord": "across-16",
+      "acrossIndex": 2,
+      "downWord": null,
+      "downIndex": null
+    },
+    "11-1": {
+      "row": 11,
+      "col": 1,
+      "num": 17,
+      "char": "रा",
+      "acrossWord": "across-17",
+      "acrossIndex": 0,
+      "downWord": "down-14",
+      "downIndex": 3
+    },
+    "11-2": {
+      "row": 11,
+      "col": 2,
+      "num": 18,
+      "char": "ज",
+      "acrossWord": "across-17",
+      "acrossIndex": 1,
+      "downWord": "down-18",
+      "downIndex": 0
+    },
+    "11-3": {
+      "row": 11,
+      "col": 3,
+      "num": null,
+      "char": "भा",
+      "acrossWord": "across-17",
+      "acrossIndex": 2,
+      "downWord": null,
+      "downIndex": null
+    },
+    "11-4": {
+      "row": 11,
+      "col": 4,
+      "num": null,
+      "char": "षा",
+      "acrossWord": "across-17",
+      "acrossIndex": 3,
+      "downWord": "down-16",
+      "downIndex": 1
+    },
+    "12-2": {
+      "row": 12,
+      "col": 2,
+      "num": null,
+      "char": "य",
+      "acrossWord": null,
+      "acrossIndex": null,
+      "downWord": "down-18",
+      "downIndex": 1
+    },
+    "12-6": {
+      "row": 12,
+      "col": 6,
+      "num": 19,
+      "char": "सू",
+      "acrossWord": null,
+      "acrossIndex": null,
+      "downWord": "down-19",
+      "downIndex": 0
+    },
+    "13-2": {
+      "row": 13,
+      "col": 2,
+      "num": null,
+      "char": "शं",
+      "acrossWord": null,
+      "acrossIndex": null,
+      "downWord": "down-18",
+      "downIndex": 2
+    },
+    "13-4": {
+      "row": 13,
+      "col": 4,
+      "num": 20,
+      "char": "क",
+      "acrossWord": "across-20",
+      "acrossIndex": 0,
+      "downWord": "down-20",
+      "downIndex": 0
+    },
+    "13-5": {
+      "row": 13,
+      "col": 5,
+      "num": null,
+      "char": "बी",
+      "acrossWord": "across-20",
+      "acrossIndex": 1,
+      "downWord": null,
+      "downIndex": null
+    },
+    "13-6": {
+      "row": 13,
+      "col": 6,
+      "num": null,
+      "char": "र",
+      "acrossWord": "across-20",
+      "acrossIndex": 2,
+      "downWord": "down-19",
+      "downIndex": 1
+    },
+    "14-2": {
+      "row": 14,
+      "col": 2,
+      "num": 21,
+      "char": "क",
+      "acrossWord": "across-21",
+      "acrossIndex": 0,
+      "downWord": "down-18",
+      "downIndex": 3
+    },
+    "14-3": {
+      "row": 14,
+      "col": 3,
+      "num": null,
+      "char": "म",
+      "acrossWord": "across-21",
+      "acrossIndex": 1,
+      "downWord": null,
+      "downIndex": null
+    },
+    "14-4": {
+      "row": 14,
+      "col": 4,
+      "num": null,
+      "char": "ल",
+      "acrossWord": "across-21",
+      "acrossIndex": 2,
+      "downWord": "down-20",
+      "downIndex": 1
+    },
+    "14-6": {
+      "row": 14,
+      "col": 6,
+      "num": null,
+      "char": "दा",
+      "acrossWord": null,
+      "acrossIndex": null,
+      "downWord": "down-19",
+      "downIndex": 2
+    },
+    "15-0": {
+      "row": 15,
+      "col": 0,
+      "num": 22,
+      "char": "सा",
+      "acrossWord": "across-22",
+      "acrossIndex": 0,
+      "downWord": "down-22",
+      "downIndex": 0
+    },
+    "15-1": {
+      "row": 15,
+      "col": 1,
+      "num": null,
+      "char": "ग",
+      "acrossWord": "across-22",
+      "acrossIndex": 1,
+      "downWord": null,
+      "downIndex": null
+    },
+    "15-2": {
+      "row": 15,
+      "col": 2,
+      "num": null,
+      "char": "र",
+      "acrossWord": "across-22",
+      "acrossIndex": 2,
+      "downWord": "down-18",
+      "downIndex": 4
+    },
+    "15-4": {
+      "row": 15,
+      "col": 4,
+      "num": null,
+      "char": "म",
+      "acrossWord": null,
+      "acrossIndex": null,
+      "downWord": "down-20",
+      "downIndex": 2
+    },
+    "15-6": {
+      "row": 15,
+      "col": 6,
+      "num": 23,
+      "char": "स",
+      "acrossWord": "across-23",
+      "acrossIndex": 0,
+      "downWord": "down-19",
+      "downIndex": 3
+    },
+    "15-7": {
+      "row": 15,
+      "col": 7,
+      "num": null,
+      "char": "र्व",
+      "acrossWord": "across-23",
+      "acrossIndex": 1,
+      "downWord": null,
+      "downIndex": null
+    },
+    "15-8": {
+      "row": 15,
+      "col": 8,
+      "num": 24,
+      "char": "ना",
+      "acrossWord": "across-23",
+      "acrossIndex": 2,
+      "downWord": "down-24",
+      "downIndex": 0
+    },
+    "15-9": {
+      "row": 15,
+      "col": 9,
+      "num": null,
+      "char": "म",
+      "acrossWord": "across-23",
+      "acrossIndex": 3,
+      "downWord": null,
+      "downIndex": null
+    },
+    "16-0": {
+      "row": 16,
+      "col": 0,
+      "num": null,
+      "char": "हि",
+      "acrossWord": null,
+      "acrossIndex": null,
+      "downWord": "down-22",
+      "downIndex": 1
+    },
+    "16-8": {
+      "row": 16,
+      "col": 8,
+      "num": null,
+      "char": "ट",
+      "acrossWord": null,
+      "acrossIndex": null,
+      "downWord": "down-24",
+      "downIndex": 1
+    },
+    "16-10": {
+      "row": 16,
+      "col": 10,
+      "num": 25,
+      "char": "गी",
+      "acrossWord": null,
+      "acrossIndex": null,
+      "downWord": "down-25",
+      "downIndex": 0
+    },
+    "17-0": {
+      "row": 17,
+      "col": 0,
+      "num": null,
+      "char": "त्य",
+      "acrossWord": null,
+      "acrossIndex": null,
+      "downWord": "down-22",
+      "downIndex": 2
+    },
+    "17-8": {
+      "row": 17,
+      "col": 8,
+      "num": 26,
+      "char": "क",
+      "acrossWord": "across-26",
+      "acrossIndex": 0,
+      "downWord": "down-24",
+      "downIndex": 2
+    },
+    "17-9": {
+      "row": 17,
+      "col": 9,
+      "num": 27,
+      "char": "वि",
+      "acrossWord": "across-26",
+      "acrossIndex": 1,
+      "downWord": "down-27",
+      "downIndex": 0
+    },
+    "17-10": {
+      "row": 17,
+      "col": 10,
+      "num": null,
+      "char": "ता",
+      "acrossWord": "across-26",
+      "acrossIndex": 2,
+      "downWord": "down-25",
+      "downIndex": 1
+    },
+    "18-7": {
+      "row": 18,
+      "col": 7,
+      "num": 28,
+      "char": "ले",
+      "acrossWord": null,
+      "acrossIndex": null,
+      "downWord": "down-28",
+      "downIndex": 0
+    },
+    "18-9": {
+      "row": 18,
+      "col": 9,
+      "num": null,
+      "char": "शे",
+      "acrossWord": null,
+      "acrossIndex": null,
+      "downWord": "down-27",
+      "downIndex": 1
+    },
+    "19-7": {
+      "row": 19,
+      "col": 7,
+      "num": null,
+      "char": "ख",
+      "acrossWord": null,
+      "acrossIndex": null,
+      "downWord": "down-28",
+      "downIndex": 1
+    },
+    "19-9": {
+      "row": 19,
+      "col": 9,
+      "num": null,
+      "char": "ष",
+      "acrossWord": null,
+      "acrossIndex": null,
+      "downWord": "down-27",
+      "downIndex": 2
+    },
+    "20-6": {
+      "row": 20,
+      "col": 6,
+      "num": 29,
+      "char": "व्या",
+      "acrossWord": "across-29",
+      "acrossIndex": 0,
+      "downWord": null,
+      "downIndex": null
+    },
+    "20-7": {
+      "row": 20,
+      "col": 7,
+      "num": null,
+      "char": "क",
+      "acrossWord": "across-29",
+      "acrossIndex": 1,
+      "downWord": "down-28",
+      "downIndex": 2
+    },
+    "20-8": {
+      "row": 20,
+      "col": 8,
+      "num": 30,
+      "char": "र",
+      "acrossWord": "across-29",
+      "acrossIndex": 2,
+      "downWord": "down-30",
+      "downIndex": 0
+    },
+    "20-9": {
+      "row": 20,
+      "col": 9,
+      "num": null,
+      "char": "ण",
+      "acrossWord": "across-29",
+      "acrossIndex": 3,
+      "downWord": "down-27",
+      "downIndex": 3
+    },
+    "21-8": {
+      "row": 21,
+      "col": 8,
+      "num": null,
+      "char": "श्मि",
+      "acrossWord": null,
+      "acrossIndex": null,
+      "downWord": "down-30",
+      "downIndex": 1
+    },
+    "22-7": {
+      "row": 22,
+      "col": 7,
+      "num": 31,
+      "char": "स",
+      "acrossWord": "across-31",
+      "acrossIndex": 0,
+      "downWord": null,
+      "downIndex": null
+    },
+    "22-8": {
+      "row": 22,
+      "col": 8,
+      "num": null,
+      "char": "र",
+      "acrossWord": "across-31",
+      "acrossIndex": 1,
+      "downWord": "down-30",
+      "downIndex": 2
+    },
+    "22-9": {
+      "row": 22,
+      "col": 9,
+      "num": null,
+      "char": "स्व",
+      "acrossWord": "across-31",
+      "acrossIndex": 2,
+      "downWord": null,
+      "downIndex": null
+    },
+    "22-10": {
+      "row": 22,
+      "col": 10,
+      "num": null,
+      "char": "ती",
+      "acrossWord": "across-31",
+      "acrossIndex": 3,
+      "downWord": null,
+      "downIndex": null
+    },
+    "23-8": {
+      "row": 23,
+      "col": 8,
+      "num": null,
+      "char": "थी",
+      "acrossWord": null,
+      "acrossIndex": null,
+      "downWord": "down-30",
+      "downIndex": 3
+    }
+  },
+  "words": {
+    "across-2": {
+      "id": "across-2",
+      "num": 2,
+      "direction": "across",
+      "clue": "प्रेम, स्नेह",
+      "length": 4,
+      "answerStr": "अनुराग",
+      "chars": [
+        "अ",
+        "नु",
+        "रा",
+        "ग"
+      ],
+      "cells": [
+        {
+          "row": 1,
+          "col": 12,
+          "index": 0
+        },
+        {
+          "row": 1,
+          "col": 13,
+          "index": 1
+        },
+        {
+          "row": 1,
+          "col": 14,
+          "index": 2
+        },
+        {
+          "row": 1,
+          "col": 15,
+          "index": 3
+        }
+      ]
+    },
+    "across-6": {
+      "id": "across-6",
+      "num": 6,
+      "direction": "across",
+      "clue": "वाल्मीकि रचित महाकाव्य",
+      "length": 4,
+      "answerStr": "रामायण",
+      "chars": [
+        "रा",
+        "मा",
+        "य",
+        "ण"
+      ],
+      "cells": [
+        {
+          "row": 3,
+          "col": 10,
+          "index": 0
+        },
+        {
+          "row": 3,
+          "col": 11,
+          "index": 1
+        },
+        {
+          "row": 3,
+          "col": 12,
+          "index": 2
+        },
+        {
+          "row": 3,
+          "col": 13,
+          "index": 3
+        }
+      ]
+    },
+    "across-7": {
+      "id": "across-7",
+      "num": 7,
+      "direction": "across",
+      "clue": "भोजन में स्वाद देने वाला",
+      "length": 3,
+      "answerStr": "नमक",
+      "chars": [
+        "न",
+        "म",
+        "क"
+      ],
+      "cells": [
+        {
+          "row": 3,
+          "col": 15,
+          "index": 0
+        },
+        {
+          "row": 3,
+          "col": 16,
+          "index": 1
+        },
+        {
+          "row": 3,
+          "col": 17,
+          "index": 2
+        }
+      ]
+    },
+    "across-9": {
+      "id": "across-9",
+      "num": 9,
+      "direction": "across",
+      "clue": "अनमेल विवाह पर प्रेमचंद का उपन्यास",
+      "length": 3,
+      "answerStr": "निर्मला",
+      "chars": [
+        "नि",
+        "र्म",
+        "ला"
+      ],
+      "cells": [
+        {
+          "row": 4,
+          "col": 8,
+          "index": 0
+        },
+        {
+          "row": 4,
+          "col": 9,
+          "index": 1
+        },
+        {
+          "row": 4,
+          "col": 10,
+          "index": 2
+        }
+      ]
+    },
+    "across-11": {
+      "id": "across-11",
+      "num": 11,
+      "direction": "across",
+      "clue": "होरी की कथा वाला उपन्यास",
+      "length": 3,
+      "answerStr": "गोदान",
+      "chars": [
+        "गो",
+        "दा",
+        "न"
+      ],
+      "cells": [
+        {
+          "row": 6,
+          "col": 2,
+          "index": 0
+        },
+        {
+          "row": 6,
+          "col": 3,
+          "index": 1
+        },
+        {
+          "row": 6,
+          "col": 4,
+          "index": 2
+        }
+      ]
+    },
+    "across-12": {
+      "id": "across-12",
+      "num": 12,
+      "direction": "across",
+      "clue": "मैथिलीशरण गुप्त का काव्य; बुद्ध की पत्नी",
+      "length": 4,
+      "answerStr": "यशोधरा",
+      "chars": [
+        "य",
+        "शो",
+        "ध",
+        "रा"
+      ],
+      "cells": [
+        {
+          "row": 6,
+          "col": 6,
+          "index": 0
+        },
+        {
+          "row": 6,
+          "col": 7,
+          "index": 1
+        },
+        {
+          "row": 6,
+          "col": 8,
+          "index": 2
+        },
+        {
+          "row": 6,
+          "col": 9,
+          "index": 3
+        }
+      ]
+    },
+    "across-13": {
+      "id": "across-13",
+      "num": 13,
+      "direction": "across",
+      "clue": "गद्य की एक छोटी विधा",
+      "length": 3,
+      "answerStr": "कहानी",
+      "chars": [
+        "क",
+        "हा",
+        "नी"
+      ],
+      "cells": [
+        {
+          "row": 7,
+          "col": 4,
+          "index": 0
+        },
+        {
+          "row": 7,
+          "col": 5,
+          "index": 1
+        },
+        {
+          "row": 7,
+          "col": 6,
+          "index": 2
+        }
+      ]
+    },
+    "across-14": {
+      "id": "across-14",
+      "num": 14,
+      "direction": "across",
+      "clue": "यात्रा करने वाला, राही",
+      "length": 4,
+      "answerStr": "मुसाफिर",
+      "chars": [
+        "मु",
+        "सा",
+        "फि",
+        "र"
+      ],
+      "cells": [
+        {
+          "row": 8,
+          "col": 1,
+          "index": 0
+        },
+        {
+          "row": 8,
+          "col": 2,
+          "index": 1
+        },
+        {
+          "row": 8,
+          "col": 3,
+          "index": 2
+        },
+        {
+          "row": 8,
+          "col": 4,
+          "index": 3
+        }
+      ]
+    },
+    "across-15": {
+      "id": "across-15",
+      "num": 15,
+      "direction": "across",
+      "clue": "दो पंक्तियों का छंद",
+      "length": 2,
+      "answerStr": "दोहा",
+      "chars": [
+        "दो",
+        "हा"
+      ],
+      "cells": [
+        {
+          "row": 9,
+          "col": 0,
+          "index": 0
+        },
+        {
+          "row": 9,
+          "col": 1,
+          "index": 1
+        }
+      ]
+    },
+    "across-16": {
+      "id": "across-16",
+      "num": 16,
+      "direction": "across",
+      "clue": "अपना देश",
+      "length": 3,
+      "answerStr": "भारत",
+      "chars": [
+        "भा",
+        "र",
+        "त"
+      ],
+      "cells": [
+        {
+          "row": 10,
+          "col": 4,
+          "index": 0
+        },
+        {
+          "row": 10,
+          "col": 5,
+          "index": 1
+        },
+        {
+          "row": 10,
+          "col": 6,
+          "index": 2
+        }
+      ]
+    },
+    "across-17": {
+      "id": "across-17",
+      "num": 17,
+      "direction": "across",
+      "clue": "संविधान में हिंदी का दर्जा",
+      "length": 4,
+      "answerStr": "राजभाषा",
+      "chars": [
+        "रा",
+        "ज",
+        "भा",
+        "षा"
+      ],
+      "cells": [
+        {
+          "row": 11,
+          "col": 1,
+          "index": 0
+        },
+        {
+          "row": 11,
+          "col": 2,
+          "index": 1
+        },
+        {
+          "row": 11,
+          "col": 3,
+          "index": 2
+        },
+        {
+          "row": 11,
+          "col": 4,
+          "index": 3
+        }
+      ]
+    },
+    "across-20": {
+      "id": "across-20",
+      "num": 20,
+      "direction": "across",
+      "clue": "निर्गुण भक्ति के दोहाकार",
+      "length": 3,
+      "answerStr": "कबीर",
+      "chars": [
+        "क",
+        "बी",
+        "र"
+      ],
+      "cells": [
+        {
+          "row": 13,
+          "col": 4,
+          "index": 0
+        },
+        {
+          "row": 13,
+          "col": 5,
+          "index": 1
+        },
+        {
+          "row": 13,
+          "col": 6,
+          "index": 2
+        }
+      ]
+    },
+    "across-21": {
+      "id": "across-21",
+      "num": 21,
+      "direction": "across",
+      "clue": "राष्ट्रीय पुष्प",
+      "length": 3,
+      "answerStr": "कमल",
+      "chars": [
+        "क",
+        "म",
+        "ल"
+      ],
+      "cells": [
+        {
+          "row": 14,
+          "col": 2,
+          "index": 0
+        },
+        {
+          "row": 14,
+          "col": 3,
+          "index": 1
+        },
+        {
+          "row": 14,
+          "col": 4,
+          "index": 2
+        }
+      ]
+    },
+    "across-22": {
+      "id": "across-22",
+      "num": 22,
+      "direction": "across",
+      "clue": "समुद्र",
+      "length": 3,
+      "answerStr": "सागर",
+      "chars": [
+        "सा",
+        "ग",
+        "र"
+      ],
+      "cells": [
+        {
+          "row": 15,
+          "col": 0,
+          "index": 0
+        },
+        {
+          "row": 15,
+          "col": 1,
+          "index": 1
+        },
+        {
+          "row": 15,
+          "col": 2,
+          "index": 2
+        }
+      ]
+    },
+    "across-23": {
+      "id": "across-23",
+      "num": 23,
+      "direction": "across",
+      "clue": "संज्ञा के बदले आने वाला शब्द",
+      "length": 4,
+      "answerStr": "सर्वनाम",
+      "chars": [
+        "स",
+        "र्व",
+        "ना",
+        "म"
+      ],
+      "cells": [
+        {
+          "row": 15,
+          "col": 6,
+          "index": 0
+        },
+        {
+          "row": 15,
+          "col": 7,
+          "index": 1
+        },
+        {
+          "row": 15,
+          "col": 8,
+          "index": 2
+        },
+        {
+          "row": 15,
+          "col": 9,
+          "index": 3
+        }
+      ]
+    },
+    "across-26": {
+      "id": "across-26",
+      "num": 26,
+      "direction": "across",
+      "clue": "छंदबद्ध भावों की रचना",
+      "length": 3,
+      "answerStr": "कविता",
+      "chars": [
+        "क",
+        "वि",
+        "ता"
+      ],
+      "cells": [
+        {
+          "row": 17,
+          "col": 8,
+          "index": 0
+        },
+        {
+          "row": 17,
+          "col": 9,
+          "index": 1
+        },
+        {
+          "row": 17,
+          "col": 10,
+          "index": 2
+        }
+      ]
+    },
+    "across-29": {
+      "id": "across-29",
+      "num": 29,
+      "direction": "across",
+      "clue": "भाषा के नियमों का शास्त्र",
+      "length": 4,
+      "answerStr": "व्याकरण",
+      "chars": [
+        "व्या",
+        "क",
+        "र",
+        "ण"
+      ],
+      "cells": [
+        {
+          "row": 20,
+          "col": 6,
+          "index": 0
+        },
+        {
+          "row": 20,
+          "col": 7,
+          "index": 1
+        },
+        {
+          "row": 20,
+          "col": 8,
+          "index": 2
+        },
+        {
+          "row": 20,
+          "col": 9,
+          "index": 3
+        }
+      ]
+    },
+    "across-31": {
+      "id": "across-31",
+      "num": 31,
+      "direction": "across",
+      "clue": "विद्या की देवी",
+      "length": 4,
+      "answerStr": "सरस्वती",
+      "chars": [
+        "स",
+        "र",
+        "स्व",
+        "ती"
+      ],
+      "cells": [
+        {
+          "row": 22,
+          "col": 7,
+          "index": 0
+        },
+        {
+          "row": 22,
+          "col": 8,
+          "index": 1
+        },
+        {
+          "row": 22,
+          "col": 9,
+          "index": 2
+        },
+        {
+          "row": 22,
+          "col": 10,
+          "index": 3
+        }
+      ]
+    },
+    "down-1": {
+      "id": "down-1",
+      "num": 1,
+      "direction": "down",
+      "clue": "कृष्ण की दीवानी राजस्थानी कवयित्री",
+      "length": 2,
+      "answerStr": "मीरा",
+      "chars": [
+        "मी",
+        "रा"
+      ],
+      "cells": [
+        {
+          "row": 0,
+          "col": 14,
+          "index": 0
+        },
+        {
+          "row": 1,
+          "col": 14,
+          "index": 1
+        }
+      ]
+    },
+    "down-2": {
+      "id": "down-2",
+      "num": 2,
+      "direction": "down",
+      "clue": "'शेखर: एक जीवनी' के लेखक",
+      "length": 3,
+      "answerStr": "अज्ञेय",
+      "chars": [
+        "अ",
+        "ज्ञे",
+        "य"
+      ],
+      "cells": [
+        {
+          "row": 1,
+          "col": 12,
+          "index": 0
+        },
+        {
+          "row": 2,
+          "col": 12,
+          "index": 1
+        },
+        {
+          "row": 3,
+          "col": 12,
+          "index": 2
+        }
+      ]
+    },
+    "down-3": {
+      "id": "down-3",
+      "num": 3,
+      "direction": "down",
+      "clue": "प्रेमचंद का उपन्यास; धन का दुरुपयोग",
+      "length": 3,
+      "answerStr": "गबन",
+      "chars": [
+        "ग",
+        "ब",
+        "न"
+      ],
+      "cells": [
+        {
+          "row": 1,
+          "col": 15,
+          "index": 0
+        },
+        {
+          "row": 2,
+          "col": 15,
+          "index": 1
+        },
+        {
+          "row": 3,
+          "col": 15,
+          "index": 2
+        }
+      ]
+    },
+    "down-4": {
+      "id": "down-4",
+      "num": 4,
+      "direction": "down",
+      "clue": "किताब",
+      "length": 3,
+      "answerStr": "पुस्तक",
+      "chars": [
+        "पु",
+        "स्त",
+        "क"
+      ],
+      "cells": [
+        {
+          "row": 1,
+          "col": 17,
+          "index": 0
+        },
+        {
+          "row": 2,
+          "col": 17,
+          "index": 1
+        },
+        {
+          "row": 3,
+          "col": 17,
+          "index": 2
+        }
+      ]
+    },
+    "down-5": {
+      "id": "down-5",
+      "num": 5,
+      "direction": "down",
+      "clue": "'सरोज स्मृति' के कवि, सूर्यकांत त्रिपाठी",
+      "length": 3,
+      "answerStr": "निराला",
+      "chars": [
+        "नि",
+        "रा",
+        "ला"
+      ],
+      "cells": [
+        {
+          "row": 2,
+          "col": 10,
+          "index": 0
+        },
+        {
+          "row": 3,
+          "col": 10,
+          "index": 1
+        },
+        {
+          "row": 4,
+          "col": 10,
+          "index": 2
+        }
+      ]
+    },
+    "down-8": {
+      "id": "down-8",
+      "num": 8,
+      "direction": "down",
+      "clue": "जयशंकर प्रसाद का महाकाव्य",
+      "length": 4,
+      "answerStr": "कामायनी",
+      "chars": [
+        "का",
+        "मा",
+        "य",
+        "नी"
+      ],
+      "cells": [
+        {
+          "row": 4,
+          "col": 6,
+          "index": 0
+        },
+        {
+          "row": 5,
+          "col": 6,
+          "index": 1
+        },
+        {
+          "row": 6,
+          "col": 6,
+          "index": 2
+        },
+        {
+          "row": 7,
+          "col": 6,
+          "index": 3
+        }
+      ]
+    },
+    "down-9": {
+      "id": "down-9",
+      "num": 9,
+      "direction": "down",
+      "clue": "गद्य की विचारप्रधान विधा",
+      "length": 3,
+      "answerStr": "निबंध",
+      "chars": [
+        "नि",
+        "बं",
+        "ध"
+      ],
+      "cells": [
+        {
+          "row": 4,
+          "col": 8,
+          "index": 0
+        },
+        {
+          "row": 5,
+          "col": 8,
+          "index": 1
+        },
+        {
+          "row": 6,
+          "col": 8,
+          "index": 2
+        }
+      ]
+    },
+    "down-10": {
+      "id": "down-10",
+      "num": 10,
+      "direction": "down",
+      "clue": "'रश्मिरथी' के रचयिता, राष्ट्रकवि",
+      "length": 4,
+      "answerStr": "दिनकर",
+      "chars": [
+        "दि",
+        "न",
+        "क",
+        "र"
+      ],
+      "cells": [
+        {
+          "row": 5,
+          "col": 4,
+          "index": 0
+        },
+        {
+          "row": 6,
+          "col": 4,
+          "index": 1
+        },
+        {
+          "row": 7,
+          "col": 4,
+          "index": 2
+        },
+        {
+          "row": 8,
+          "col": 4,
+          "index": 3
+        }
+      ]
+    },
+    "down-14": {
+      "id": "down-14",
+      "num": 14,
+      "direction": "down",
+      "clue": "लाक्षणिक अर्थ देने वाला वाक्यांश",
+      "length": 4,
+      "answerStr": "मुहावरा",
+      "chars": [
+        "मु",
+        "हा",
+        "व",
+        "रा"
+      ],
+      "cells": [
+        {
+          "row": 8,
+          "col": 1,
+          "index": 0
+        },
+        {
+          "row": 9,
+          "col": 1,
+          "index": 1
+        },
+        {
+          "row": 10,
+          "col": 1,
+          "index": 2
+        },
+        {
+          "row": 11,
+          "col": 1,
+          "index": 3
+        }
+      ]
+    },
+    "down-16": {
+      "id": "down-16",
+      "num": 16,
+      "direction": "down",
+      "clue": "भावों को व्यक्त करने का माध्यम",
+      "length": 2,
+      "answerStr": "भाषा",
+      "chars": [
+        "भा",
+        "षा"
+      ],
+      "cells": [
+        {
+          "row": 10,
+          "col": 4,
+          "index": 0
+        },
+        {
+          "row": 11,
+          "col": 4,
+          "index": 1
+        }
+      ]
+    },
+    "down-18": {
+      "id": "down-18",
+      "num": 18,
+      "direction": "down",
+      "clue": "'प्रसाद' जी का पहला नाम",
+      "length": 5,
+      "answerStr": "जयशंकर",
+      "chars": [
+        "ज",
+        "य",
+        "शं",
+        "क",
+        "र"
+      ],
+      "cells": [
+        {
+          "row": 11,
+          "col": 2,
+          "index": 0
+        },
+        {
+          "row": 12,
+          "col": 2,
+          "index": 1
+        },
+        {
+          "row": 13,
+          "col": 2,
+          "index": 2
+        },
+        {
+          "row": 14,
+          "col": 2,
+          "index": 3
+        },
+        {
+          "row": 15,
+          "col": 2,
+          "index": 4
+        }
+      ]
+    },
+    "down-19": {
+      "id": "down-19",
+      "num": 19,
+      "direction": "down",
+      "clue": "कृष्ण भक्ति के अंधे कवि",
+      "length": 4,
+      "answerStr": "सूरदास",
+      "chars": [
+        "सू",
+        "र",
+        "दा",
+        "स"
+      ],
+      "cells": [
+        {
+          "row": 12,
+          "col": 6,
+          "index": 0
+        },
+        {
+          "row": 13,
+          "col": 6,
+          "index": 1
+        },
+        {
+          "row": 14,
+          "col": 6,
+          "index": 2
+        },
+        {
+          "row": 15,
+          "col": 6,
+          "index": 3
+        }
+      ]
+    },
+    "down-20": {
+      "id": "down-20",
+      "num": 20,
+      "direction": "down",
+      "clue": "लिखने का साधन",
+      "length": 3,
+      "answerStr": "कलम",
+      "chars": [
+        "क",
+        "ल",
+        "म"
+      ],
+      "cells": [
+        {
+          "row": 13,
+          "col": 4,
+          "index": 0
+        },
+        {
+          "row": 14,
+          "col": 4,
+          "index": 1
+        },
+        {
+          "row": 15,
+          "col": 4,
+          "index": 2
+        }
+      ]
+    },
+    "down-22": {
+      "id": "down-22",
+      "num": 22,
+      "direction": "down",
+      "clue": "समाज का दर्पण कहलाता है",
+      "length": 3,
+      "answerStr": "साहित्य",
+      "chars": [
+        "सा",
+        "हि",
+        "त्य"
+      ],
+      "cells": [
+        {
+          "row": 15,
+          "col": 0,
+          "index": 0
+        },
+        {
+          "row": 16,
+          "col": 0,
+          "index": 1
+        },
+        {
+          "row": 17,
+          "col": 0,
+          "index": 2
+        }
+      ]
+    },
+    "down-24": {
+      "id": "down-24",
+      "num": 24,
+      "direction": "down",
+      "clue": "मंच पर खेली जाने वाली विधा",
+      "length": 3,
+      "answerStr": "नाटक",
+      "chars": [
+        "ना",
+        "ट",
+        "क"
+      ],
+      "cells": [
+        {
+          "row": 15,
+          "col": 8,
+          "index": 0
+        },
+        {
+          "row": 16,
+          "col": 8,
+          "index": 1
+        },
+        {
+          "row": 17,
+          "col": 8,
+          "index": 2
+        }
+      ]
+    },
+    "down-25": {
+      "id": "down-25",
+      "num": 25,
+      "direction": "down",
+      "clue": "कुरुक्षेत्र में दिया गया उपदेश-ग्रंथ",
+      "length": 2,
+      "answerStr": "गीता",
+      "chars": [
+        "गी",
+        "ता"
+      ],
+      "cells": [
+        {
+          "row": 16,
+          "col": 10,
+          "index": 0
+        },
+        {
+          "row": 17,
+          "col": 10,
+          "index": 1
+        }
+      ]
+    },
+    "down-27": {
+      "id": "down-27",
+      "num": 27,
+      "direction": "down",
+      "clue": "संज्ञा की विशेषता बताने वाला",
+      "length": 4,
+      "answerStr": "विशेषण",
+      "chars": [
+        "वि",
+        "शे",
+        "ष",
+        "ण"
+      ],
+      "cells": [
+        {
+          "row": 17,
+          "col": 9,
+          "index": 0
+        },
+        {
+          "row": 18,
+          "col": 9,
+          "index": 1
+        },
+        {
+          "row": 19,
+          "col": 9,
+          "index": 2
+        },
+        {
+          "row": 20,
+          "col": 9,
+          "index": 3
+        }
+      ]
+    },
+    "down-28": {
+      "id": "down-28",
+      "num": 28,
+      "direction": "down",
+      "clue": "लिखने वाला",
+      "length": 3,
+      "answerStr": "लेखक",
+      "chars": [
+        "ले",
+        "ख",
+        "क"
+      ],
+      "cells": [
+        {
+          "row": 18,
+          "col": 7,
+          "index": 0
+        },
+        {
+          "row": 19,
+          "col": 7,
+          "index": 1
+        },
+        {
+          "row": 20,
+          "col": 7,
+          "index": 2
+        }
+      ]
+    },
+    "down-30": {
+      "id": "down-30",
+      "num": 30,
+      "direction": "down",
+      "clue": "कर्ण पर लिखा दिनकर का खंडकाव्य",
+      "length": 4,
+      "answerStr": "रश्मिरथी",
+      "chars": [
+        "र",
+        "श्मि",
+        "र",
+        "थी"
+      ],
+      "cells": [
+        {
+          "row": 20,
+          "col": 8,
+          "index": 0
+        },
+        {
+          "row": 21,
+          "col": 8,
+          "index": 1
+        },
+        {
+          "row": 22,
+          "col": 8,
+          "index": 2
+        },
+        {
+          "row": 23,
+          "col": 8,
+          "index": 3
+        }
+      ]
+    }
+  },
+  "puzzleSyllables": [
+    "अ",
+    "नु",
+    "रा",
+    "ग",
+    "मा",
+    "य",
+    "ण",
+    "न",
+    "म",
+    "क",
+    "नि",
+    "र्म",
+    "ला",
+    "गो",
+    "दा",
+    "शो",
+    "ध",
+    "हा",
+    "नी",
+    "मु",
+    "सा",
+    "फि",
+    "र",
+    "दो",
+    "भा",
+    "त",
+    "ज",
+    "षा",
+    "बी",
+    "ल",
+    "स",
+    "र्व",
+    "ना",
+    "वि",
+    "ता",
+    "व्या",
+    "स्व",
+    "ती",
+    "मी",
+    "ज्ञे",
+    "ब",
+    "पु",
+    "स्त",
+    "का",
+    "बं",
+    "दि",
+    "व",
+    "शं",
+    "सू",
+    "हि",
+    "त्य",
+    "ट",
+    "गी",
+    "शे",
+    "ष",
+    "ले",
+    "ख",
+    "श्मि",
+    "थी"
+  ],
+  "decoySyllables": [
+    "खू",
+    "ध्रु",
+    "टौ",
+    "ज्ञं",
+    "प्स",
+    "श्व",
+    "द्वो",
+    "स्त्र",
+    "झि",
+    "ढु",
+    "प्र",
+    "त्कृ",
+    "न्मा",
+    "द्भ"
+  ]
+};

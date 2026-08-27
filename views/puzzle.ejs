@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>हिंदी वर्ग पहेली - उत्तर पैड</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Application Header -->
+  <header class="app-header">
+    <div class="header-top">
+      <div class="brand-title">वर्ग पहेली - उत्तर पैड</div>
+      <div class="user-badge">प्रतिभागी: <%= user.name %></div>
+    </div>
+    <div class="header-actions">
+      <button type="button" class="btn btn-secondary" onclick="openRulesModal()">नियम और निर्देश</button>
+      <a href="/leaderboard" class="btn btn-secondary">लीडरबोर्ड</a>
+      <button type="button" class="btn btn-danger" onclick="startFinalSubmitFlow()">अंतिम सबमिट</button>
+    </div>
+  </header>
+
+  <!-- Active Status Bar -->
+  <div class="active-clue-bar" id="active-clue-bar">
+    <span class="clue-text" id="clue-display-text">शब्द चुनें</span>
+    <span class="dir-badge" id="dir-badge-display">-</span>
+  </div>
+
+  <!-- 24x18 Grid Wrapper -->
+  <div class="grid-wrapper">
+    <div class="grid-board" id="grid-board">
+      <% for(let r = 0; r < 24; r++) { %>
+        <% for(let c = 0; c < 18; c++) { %>
+          <% 
+            const key = `${r}-${c}`;
+            const cellData = puzzleData.cellMap[key];
+          %>
+          <% if (!cellData) { %>
+            <div class="cell-blk" data-row="<%= r %>" data-col="<%= c %>"></div>
+          <% } else { %>
+            <% 
+              // Determine saved hydrated character for this cell
+              let charDisplay = '';
+              if (cellData.acrossWord && wordStateMap[cellData.acrossWord]) {
+                const guessArr = wordStateMap[cellData.acrossWord].currentGuess;
+                if (guessArr && guessArr[cellData.acrossIndex]) {
+                  charDisplay = guessArr[cellData.acrossIndex];
+                }
+              }
+              if (!charDisplay && cellData.downWord && wordStateMap[cellData.downWord]) {
+                const guessArr = wordStateMap[cellData.downWord].currentGuess;
+                if (guessArr && guessArr[cellData.downIndex]) {
+                  charDisplay = guessArr[cellData.downIndex];
+                }
+              }
+            %>
+            <div class="cell" 
+                 id="cell-<%= r %>-<%= c %>"
+                 data-row="<%= r %>" 
+                 data-col="<%= c %>"
+                 data-across="<%= cellData.acrossWord || '' %>"
+                 data-across-index="<%= cellData.acrossIndex !== null ? cellData.acrossIndex : '' %>"
+                 data-down="<%= cellData.downWord || '' %>"
+                 data-down-index="<%= cellData.downIndex !== null ? cellData.downIndex : '' %>"
+                 onclick="handleCellClick(this)">
+              <% if (cellData.num) { %>
+                <span class="cell-num"><%= cellData.num %></span>
+              <% } %>
+              <span class="cell-char" id="char-<%= r %>-<%= c %>"><%= charDisplay %></span>
+            </div>
+          <% } %>
+        <% } %>
+      <% } %>
+    </div>
+  </div>
+
+  <!-- Custom Hindi Keyboard -->
+  <%- include('partials/keyboard') %>
+
+  <!-- Modals -->
+  <%- include('partials/rulesModal') %>
+  <%- include('partials/confirmModal') %>
+
+  <!-- Server Data Payload for Frontend JS -->
+  <script id="server-data" type="application/json">
+    <%- JSON.stringify({
+      puzzleData: puzzleData,
+      wordStateMap: wordStateMap,
+      isCompleted: isCompleted,
+      user: { id: user._id, name: user.name }
+    }) %>
+  </script>
+  <script src="/js/puzzle.js"></script>
+</body>
+</html>
